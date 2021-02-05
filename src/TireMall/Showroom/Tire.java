@@ -1,14 +1,17 @@
 package TireMall.Showroom;
 
+import org.jetbrains.annotations.NotNull;
 import java.util.UUID;
 
 public class Tire {
 
-    private UUID id;
-    private String name;
+    private final UUID id;
+    private final String name;
 
-    public Tire(UUID id, String name) {
-        super();
+    public Tire(@NotNull String name) {
+
+
+
         this.id = UUID.randomUUID();
         this.name = name;
     }
@@ -20,18 +23,17 @@ public class Tire {
     public String name() {
         return name;
     }
-
+@Override
     public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        } else if (o != null && this.getClass() == o.getClass()) {
-            Tire tire = (Tire) o;
-            return !this.id.equals(tire.id) ? false : this.name.equals(tire.name);
-        } else {
-            return false;
-        }
-    }
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
 
+    Tire tire = (Tire) o;
+
+    if (!id.equals(tire.id)) return false;
+    return name.equals(tire.name);
+    }
+@Override
     public int hashCode() {
         int result = this.id.hashCode();
         result = 31 * result + this.name.hashCode();
