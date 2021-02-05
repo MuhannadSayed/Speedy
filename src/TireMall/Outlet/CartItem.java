@@ -1,4 +1,4 @@
-package TireMall.Showroom;
+package TireMall.Outlet;
 
 import java.math.BigDecimal;
 import org.jetbrains.annotations.NotNull;

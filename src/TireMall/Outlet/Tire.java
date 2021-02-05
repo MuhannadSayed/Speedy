@@ -1,4 +1,4 @@
-package TireMall.Showroom;
+package TireMall.Outlet;
 
 import org.jetbrains.annotations.NotNull;
 import java.util.UUID;

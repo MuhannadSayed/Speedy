@@ -1,8 +1,6 @@
-package TireMall.Showroom;
+package TireMall.Outlet;
 
 import java.util.ArrayList;
-import java.util.Stack;
-import java.util.stream.Stream;
 
 public class Cart {
 
