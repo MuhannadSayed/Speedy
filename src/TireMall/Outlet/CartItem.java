@@ -1,16 +1,17 @@
 package TireMall.Outlet;
 
-import java.math.BigDecimal;
 import org.jetbrains.annotations.NotNull;
+
+import java.math.BigDecimal;
 
 public class CartItem {
 
-    private final BigDecimal itemCost;
+    private final BigDecimal itemPrice;
     private final Tire tire;
     private final int quantity;
 
-    public BigDecimal itemCost() {
-        return itemCost;
+    public BigDecimal itemPrice() {
+        return itemPrice;
     }
 
     public Tire tire() {
@@ -21,9 +22,9 @@ public class CartItem {
         return quantity;
     }
 
-    public CartItem(@NotNull Tire tire , double itemCost , int quantity) {
+    public CartItem(@NotNull Tire tire , double itemPrice, int quantity) {
 
-        this.itemCost = BigDecimal.valueOf(itemCost);
+        this.itemPrice = BigDecimal.valueOf(itemPrice);
         this.tire = tire;
         this.quantity = quantity;
 
@@ -34,17 +35,17 @@ public class CartItem {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        CartItem defItem = (CartItem) o;
+        CartItem DefItem = (CartItem) o;
 
-        if (quantity != defItem.quantity) return false;
-        if (!itemCost.equals(defItem.itemCost)) return false;
-        return tire.equals(defItem.tire);
+        if (quantity != DefItem.quantity) return false;
+        if (!itemPrice.equals(DefItem.itemPrice)) return false;
+        return tire.equals(DefItem.tire);
     }
 
 
     @Override
     public int hashCode() {
-        int result = itemCost.hashCode();
+        int result = itemPrice.hashCode();
         result = 31 * result + tire.hashCode();
         result = 31 * result + quantity;
         return result;

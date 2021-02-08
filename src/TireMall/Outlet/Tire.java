@@ -12,7 +12,7 @@ public class Tire {
 
 
 
-        this.id = UUID.randomUUID();
+        this.id = java.util.UUID.randomUUID();
         this.name = name;
     }
 
