@@ -3,11 +3,11 @@ package TireMall.Commands;
 public class State {
 
     Command redo;
-    Command undro;
+    Command undo;
 
     public State(Command r, Command u) {
         this.redo = r;
-        this.undro = u;
+        this.undo = u;
     }
 }
 // TODO
