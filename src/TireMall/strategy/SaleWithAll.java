@@ -16,9 +16,9 @@ public class SaleWithAll  implements Sale{
             sum = item.itemPrice().multiply(BigDecimal.valueOf(item.quantity())).add(sum);
         }
 
-        if(sum.doubleValue() >= 1000){
-            System.out.println("WoW you have sale on all products !!!!");
-            finalAmount = sum.multiply(BigDecimal.valueOf(0.1));
+        if(sum.doubleValue() >= 3000){
+            System.out.println("WoW you have sale on all tires !!!!");
+            finalAmount = sum.multiply(BigDecimal.valueOf(0.2));
         }
         return finalAmount;
     }
